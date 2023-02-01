@@ -44,15 +44,17 @@ public class AppInitializer {
         Customer ijse = (Customer) ant.getBean("ijse");
         System.out.println(ijse);
 
-        ant.close();
-
-
         //Hooking process(JVM eka run vela ivara venna mohothakata pera run venna one deyak)
-        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+       /* Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
                 System.out.println("JVM is Shutdown");
+                ant.close();
             }
-        }));
+        }));*/
+
+        //this method will close the Spring Container just before JVM shut down
+        ant.registerShutdownHook();
+        //ctx.close(); // immediately close the container
     }
 }
