@@ -25,6 +25,12 @@ public class AppInitializer {
         System.out.println(bean1);
         System.out.println(bean2);
 
+        System.out.println("====Bean ID======");
+        //@Component
+        //Customer -> customer (beanID) get the class name and then
+        //convert the first letter into simple letter
+        Customer customer1 = (Customer) ant.getBean("customer");
+        System.out.println(customer1);
 
         ant.close();
     }
