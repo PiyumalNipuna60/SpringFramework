@@ -33,6 +33,13 @@ public class AppInitializer {
         Customer customer1 = (Customer) ant.getBean("customer");
         System.out.println(customer1);
 
+
+        System.out.println("====Bean class Bean ID======");
+        //How the @Bean bean id is created.?
+        //Generate bean id with bean method name
+        BasicDataSource basicDataSource = (BasicDataSource) ant.getBean("basicDataSource");
+        System.out.println(basicDataSource);
+
         ant.close();
     }
 }
