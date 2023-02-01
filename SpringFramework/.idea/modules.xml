@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01-Hello-Spring/01-Hello-Spring.iml" filepath="$PROJECT_DIR$/01-Hello-Spring/01-Hello-Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-Bean-life-Cycle/02-Bean-life-Cycle.iml" filepath="$PROJECT_DIR$/02-Bean-life-Cycle/02-Bean-life-Cycle.iml" />
     </modules>
   </component>
 </project>
