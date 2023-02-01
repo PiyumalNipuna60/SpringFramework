@@ -45,5 +45,14 @@ public class AppInitializer {
         System.out.println(ijse);
 
         ant.close();
+
+
+        //Hooking process(JVM eka run vela ivara venna mohothakata pera run venna one deyak)
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("JVM is Shutdown");
+            }
+        }));
     }
 }
