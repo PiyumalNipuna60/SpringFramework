@@ -2,7 +2,7 @@ package lk.ijse.Spring.pojo;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("ijse")
 public class Customer {
     public Customer(){
         System.out.println("Customer: Instantiated..!");

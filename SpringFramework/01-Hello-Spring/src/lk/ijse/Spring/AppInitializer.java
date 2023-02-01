@@ -30,8 +30,8 @@ public class AppInitializer {
         //Customer -> customer (beanID) get the class name and then
         //convert the first letter into simple letter
 
-        Customer customer1 = (Customer) ant.getBean("customer");
-        System.out.println(customer1);
+        /*Customer customer1 = (Customer) ant.getBean("customer");
+        System.out.println(customer1);*/
 
 
         System.out.println("====Bean class Bean ID======");
@@ -39,6 +39,10 @@ public class AppInitializer {
         //Generate bean id with bean method name
         BasicDataSource basicDataSource = (BasicDataSource) ant.getBean("basicDataSource");
         System.out.println(basicDataSource);
+
+
+        Customer ijse = (Customer) ant.getBean("ijse");
+        System.out.println(ijse);
 
         ant.close();
     }
