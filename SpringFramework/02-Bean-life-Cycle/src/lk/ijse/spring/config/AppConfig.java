@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     public AppConfig(){
-        System.out.println("hyyy");
+        System.out.println("AppConfig Constructor");
     }
 }
