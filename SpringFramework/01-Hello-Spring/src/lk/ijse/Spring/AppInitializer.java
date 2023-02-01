@@ -29,6 +29,7 @@ public class AppInitializer {
         //@Component
         //Customer -> customer (beanID) get the class name and then
         //convert the first letter into simple letter
+
         Customer customer1 = (Customer) ant.getBean("customer");
         System.out.println(customer1);
 
