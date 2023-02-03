@@ -4,12 +4,13 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Pojo1 implements BeanNameAware, BeanFactoryAware, ApplicationContextAware {
+public class Pojo1 implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean {
     public Pojo1(){
         System.out.println("Pojo1 Constructor");
     }
@@ -27,5 +28,10 @@ public class Pojo1 implements BeanNameAware, BeanFactoryAware, ApplicationContex
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println("applicationContext Aware : "+applicationContext);
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Pojo1  : InitializingBean bean");
     }
 }
