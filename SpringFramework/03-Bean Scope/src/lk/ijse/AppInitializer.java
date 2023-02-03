@@ -10,13 +10,16 @@ public class AppInitializer {
         ant.register(AppConfig.class);
         ant.refresh();
 
-        Pojo1 bean1 = ant.getBean(Pojo1.class);
+      /*  Pojo1 bean1 = ant.getBean(Pojo1.class);
         Pojo1 bean2 = ant.getBean(Pojo1.class);
         System.out.println("Bean 1 : "+bean1);
         System.out.println("Bean 2 : "+bean2);
         //case 1
         //* SCOPE_PROTOTYPE nisa bean life cycle eka object hadana ganata run veava
         //* SCOPE_PROTOTYPE nisa distroy method eka run venne naha
+        */
+
+        //* Object hadala nattan Bean Life Cycle eka run venne naha
 
 
         ant.registerShutdownHook();
