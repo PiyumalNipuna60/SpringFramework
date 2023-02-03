@@ -14,9 +14,13 @@ public class AppConfig {
     }
 
     @Bean
-
+    //Full Mode
     public Pojo2 pojo2(){
-
+        //Inter-bean Dependency Invocation
+        Pojo3 pojo31 = pojo3();
+        Pojo3 pojo32 = pojo3();
+        System.out.println(pojo31);
+        System.out.println(pojo32);
         return new Pojo2();
     }
 
