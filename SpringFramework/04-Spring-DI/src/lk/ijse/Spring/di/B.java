@@ -6,11 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class B{
 
+    @Autowired
+    ABC abc;
+
     public B(){
         System.out.println("B Constructor..!");
     }
 
     public void test(){
+        abc.Chat();
     }
 
 
