@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+//@Primary
 public class Girl1 implements GoodGirl{
 
     public Girl1(){
