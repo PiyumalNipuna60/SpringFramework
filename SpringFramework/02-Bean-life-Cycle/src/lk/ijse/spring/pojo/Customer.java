@@ -7,33 +7,34 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Pojo1 implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
-    public Pojo1(){
-        System.out.println("Pojo1 Constructor");
+public class Customer implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
+
+    public Customer(){
+        System.out.println("Customer Constructor");
     }
 
     @Override
     public void setBeanName(String name) {
-        System.out.println("Bean Name Aware! : "+name);
+        System.out.println("Customer Bean name : "+name);
     }
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("Bean Factor Aware : "+beanFactory);
+        System.out.println("Customer Bean Factory : "+beanFactory);
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("applicationContext Aware : "+applicationContext);
+        System.out.println("Customer applicationContext : "+applicationContext);
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("Pojo1  : InitializingBean bean");
+        System.out.println("Customer Initializer");
     }
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("Pojo1 : DisposableBean");
+        System.out.println("Customer DisposableBean");
     }
 }
