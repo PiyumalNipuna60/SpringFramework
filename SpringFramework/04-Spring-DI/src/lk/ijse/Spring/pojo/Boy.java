@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class Boy {
 
     @Autowired
-    Girl girl;
+    GoodGirl girl;
 
     public Boy(){
         System.out.println("Boy Constructor..!");
