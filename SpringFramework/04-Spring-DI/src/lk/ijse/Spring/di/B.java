@@ -13,8 +13,13 @@ public class B{
 
     @Autowired
     public B(ABC a){
-        this.abc=a;//Constructor Inject
+        /*this.abc=a;//Constructor Inject*/
         System.out.println("B Constructor..!");
+    }
+
+    @Autowired
+    public void setInject(ABC a){
+        this.abc=a;//Setter Method Injecter
     }
 
     public void test(){
