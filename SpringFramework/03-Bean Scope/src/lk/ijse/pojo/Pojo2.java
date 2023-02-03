@@ -9,36 +9,36 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class Pojo1 implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
-    public Pojo1(){
-        System.out.println("Pojo1 Constructor..!");
+public class Pojo2 implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
+    public Pojo2(){
+        System.out.println("Pojo2 Constructor..!");
     }
 
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("bean1 BeanFactoryAware");
+        System.out.println("bean2 BeanFactoryAware");
     }
 
     @Override
     public void setBeanName(String name) {
-        System.out.println("bean1 BeanNameAware");
+        System.out.println("bean2 BeanNameAware");
     }
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("bean1 DisposableBean");
+        System.out.println("bean2 DisposableBean");
+
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("bean1 InitializingBean");
+        System.out.println("bean2 InitializingBean");
         System.out.println("====================");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("bean setApplicationContext");
+        System.out.println("bean2 setApplicationContext");
     }
 }
