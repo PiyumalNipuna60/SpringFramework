@@ -5,9 +5,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = "lk.ijse.spring")
-public class AppConfig {
+public class AppConfige {
 
-    public AppConfig(){
+    public AppConfige(){
         System.out.println("AppConfig Constructor..!");
     }
 }
