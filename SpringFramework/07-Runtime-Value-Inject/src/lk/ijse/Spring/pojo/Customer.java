@@ -24,7 +24,7 @@ public class Customer {
         System.out.println("Customer Constructor(int i)..! "+age);
     }*/
 
-
+    @Autowired(required = false)
     public Customer(@Value("kamal,sadun,malith") String name[]){    //Arrays
         System.out.println("Customer Constructor(int i)..!");
         for (int i = 0; i < name.length; i++) {
@@ -32,8 +32,8 @@ public class Customer {
         }
     }
 
-    @Autowired
-    public Customer(@Value("ijse") String name){
+    @Autowired(required = false)
+    public Customer(@Value("ijse") String name,@Value("10") int x){   //value count eka vadi nisa meka run karavanava
         System.out.println("Customer Constructor(int i)..!"+name);
     }
 }
