@@ -17,7 +17,7 @@ public class AppInitializer {
 
 
         //OS Environment variables
-        Map<String, String> getenv = System.getenv();
+       /* Map<String, String> getenv = System.getenv();
         for (String key : getenv.keySet()) {
             String value = getenv.get(key);
             System.out.println(key+" : "+value);
@@ -31,6 +31,6 @@ public class AppInitializer {
         for (Object key : properties.keySet()) {
             Object values = properties.get(key);
             System.out.println(key+" : "+values);
-        }
+        }*/
     }
 }

@@ -13,6 +13,12 @@ public class DBConnection implements InitializingBean {
     @Value("${user.name}")
     public String myUserName;
 
+    @Value("${db.user.name}")
+    public String dbUserName;
+
+    @Value("${db.user.password}")
+    public String dbUserPassword;
+
     public DBConnection(){
         System.out.println("DBConnection constructor..!");
     }
@@ -21,5 +27,8 @@ public class DBConnection implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         System.out.println("DBConnection Ocn Name : "+myOsName);
         System.out.println("DBConnection Ocn myUserName : "+myUserName);
+        System.out.println("==============");
+        System.out.println("DBConnection UserName : "+dbUserName);
+        System.out.println("DBConnection Password : "+dbUserPassword);
     }
 }
