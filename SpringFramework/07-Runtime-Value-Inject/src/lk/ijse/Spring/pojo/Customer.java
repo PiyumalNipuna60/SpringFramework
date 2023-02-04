@@ -19,7 +19,14 @@ public class Customer {
     //String Data
     //Arrays
 
-    public Customer(@Value("10") int age){    //Primitive data Type
+    /*public Customer(@Value("10") int age){    //Primitive data Type
         System.out.println("Customer Constructor(int i)..! "+age);
+    }*/
+
+    public Customer(@Value("kamal,sadun,malith") String name[]){    //Arrays
+        System.out.println("Customer Constructor(int i)..!");
+        for (int i = 0; i < name.length; i++) {
+            System.out.println(name[i]);
+        }
     }
 }
