@@ -1,9 +1,10 @@
 package lk.ijse.Spring.config;
 
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-@Component
+@Configuration
 @ComponentScan(basePackages = "lk.ijse.Spring")
 public class AppConfig {
     public AppConfig() {
