@@ -1,5 +1,6 @@
 package lk.ijse.Spring.pojo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -23,10 +24,16 @@ public class Customer {
         System.out.println("Customer Constructor(int i)..! "+age);
     }*/
 
+
     public Customer(@Value("kamal,sadun,malith") String name[]){    //Arrays
         System.out.println("Customer Constructor(int i)..!");
         for (int i = 0; i < name.length; i++) {
             System.out.println(name[i]);
         }
+    }
+
+    @Autowired
+    public Customer(@Value("ijse") String name){
+        System.out.println("Customer Constructor(int i)..!"+name);
     }
 }
