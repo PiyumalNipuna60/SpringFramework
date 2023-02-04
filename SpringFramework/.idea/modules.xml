@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/04-Spring-DI/04-Spring-DI.iml" filepath="$PROJECT_DIR$/04-Spring-DI/04-Spring-DI.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-FullMode-LightMode/05-FullMode-LightMode.iml" filepath="$PROJECT_DIR$/05-FullMode-LightMode/05-FullMode-LightMode.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-Spring-Configuration/06-Spring-Configuration.iml" filepath="$PROJECT_DIR$/06-Spring-Configuration/06-Spring-Configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-Runtime-Value-Inject/07-Runtime-Value-Inject.iml" filepath="$PROJECT_DIR$/07-Runtime-Value-Inject/07-Runtime-Value-Inject.iml" />
     </modules>
   </component>
 </project>
