@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/07-Runtime-Value-Inject/07-Runtime-Value-Inject.iml" filepath="$PROJECT_DIR$/07-Runtime-Value-Inject/07-Runtime-Value-Inject.iml" />
       <module fileurl="file://$PROJECT_DIR$/08-Spring-Environment/08-Spring-Environment.iml" filepath="$PROJECT_DIR$/08-Spring-Environment/08-Spring-Environment.iml" />
       <module fileurl="file://$PROJECT_DIR$/09-Spring-web-MVC/09-Spring-web-MVC.iml" filepath="$PROJECT_DIR$/09-Spring-web-MVC/09-Spring-web-MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-Controller/10-Controller.iml" filepath="$PROJECT_DIR$/10-Controller/10-Controller.iml" />
     </modules>
   </component>
 </project>
