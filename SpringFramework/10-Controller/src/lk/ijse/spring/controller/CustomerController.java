@@ -15,13 +15,14 @@ public class CustomerController {
         System.out.println("CustomerController Constructor..!");
     }
 
-    @GetMapping
+//    @GetMapping
 //    public void getCall(){
 //        System.out.println("Method invoke");
 //    }
 
+    @GetMapping
     public ModelAndView getCall(){
-        return new ModelAndView("This window load");
+        return new ModelAndView("/Customer");
     }
 
 }

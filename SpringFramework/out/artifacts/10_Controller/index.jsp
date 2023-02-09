@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<h2>Ne page Invoke..!</h2>
+<h2>New page Invoke 2..!</h2>
 </body>
 </html>
