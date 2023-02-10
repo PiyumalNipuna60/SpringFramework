@@ -24,4 +24,5 @@ public class WebAppConfig {
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
+
 }
