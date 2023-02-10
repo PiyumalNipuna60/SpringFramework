@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="11-RestController">
+    <output-path>$PROJECT_DIR$/out/artifacts/11_RestController</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="11-RestController/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="11-RestController" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="spring-aop-5.3.9-javadoc" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
