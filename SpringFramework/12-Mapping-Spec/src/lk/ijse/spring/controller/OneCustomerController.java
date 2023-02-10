@@ -11,6 +11,11 @@ public class OneCustomerController {
         return "GetMapping invoke..!";
     }
 
+//    @GetMapping
+//    public String testOne2() {
+//        return "GetMapping 2 invoke..!";
+//    }  // ambiguous problem
+
     @PostMapping
     public String testTwo() {
         return "PostMapping invoke..!";
