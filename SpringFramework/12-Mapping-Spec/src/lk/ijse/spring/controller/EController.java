@@ -13,5 +13,19 @@ public class EController {
         return "GetMapping invoke..!";
     }
 
+     //Wild Card Mapping
+    //Match one or more characters inside a path
+    //segment
+    //http://localhost:8080/mapping/five/path/1ormore/A/B
+
+    @GetMapping("/path/*/A/B")
+    public String testone1(){
+        return "GetMapping Method 1 invoke..!";
+    }
+
+    @GetMapping("/*/path/A/B")
+    public String testone2(){
+        return "GetMapping Method 2 invoke..!";
+    }
 
 }
