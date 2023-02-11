@@ -14,4 +14,17 @@ public class GController {
     }
 
 
+    //http://localhost:8080/mapping/seven?id=C001&name=IJSE
+    //Narrow down request with query String Parameters
+
+    @GetMapping(params = {"id","name"})
+    public String testOne2(){
+        return "GetMapping one invoke..!";
+    }
+
+    @GetMapping(params = {"address","salary"})
+    public String testOne3(){
+        return "GetMapping Two invoke..!";
+    }
+
 }
