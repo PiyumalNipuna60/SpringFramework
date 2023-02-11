@@ -1,10 +1,13 @@
 package lk.ijse.spring.controller;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/two")
-public class TwoCustomerController {
+public class BController {
 
     @GetMapping
     public String testOne() {
@@ -24,6 +27,4 @@ public class TwoCustomerController {
     public String testOne4() {
         return "GetMapping 4 invoke..!";
     }
-
-
 }
