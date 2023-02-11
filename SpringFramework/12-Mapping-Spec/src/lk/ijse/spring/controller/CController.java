@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class CController {
 
    // http://localhost:8081/12_Mapping_Spec/three/id/C002/Kamal
-    @GetMapping(path = "/id/{C001}/{Dasun}")
-    public String testOne(@PathVariable("C001") String id,@PathVariable("Dasun") String name) {
-        System.out.println(id+" "+name);
-        return "GetMapping 1 invoke..!";
-    }
+//    @GetMapping(path = "/id/{C001}/{Dasun}")
+//    public String testOne(@PathVariable("C001") String id,@PathVariable("Dasun") String name) {
+//        System.out.println(id+" "+name);
+//        return "GetMapping 1 invoke..!";
+//    }
 
 /*
     // http://localhost:8081/12_Mapping_Spec/three/id/C001/Dasun
@@ -40,6 +40,13 @@ public class CController {
     public  String testOne22(@PathVariable String id,@PathVariable String name){
         return "Get Method 1 Invoked "+id+" "+name;
     }
+
+
+    //http://localhost:8080/mapping/three/id/CC002/kavindu // Ok
+//    @GetMapping(path = "/id/{id:[C]{2}[0-9]{3}}/{name:[a-z]{5}}") //()
+//    public  String testOne221(@PathVariable String id,@PathVariable String name){
+//        return "Get Method 2 Invoked "+id+" "+name;
+//    }
 
 
 }
