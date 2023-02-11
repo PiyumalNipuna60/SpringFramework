@@ -13,4 +13,19 @@ public class HController {
         return "GetMapping invoke..!";
     }
 
+
+    //How many parts are there in an HTTP request.?
+    // There are two parts
+    //Headers (Meta Data) "Content-Type=application/json"
+    //Body (Context)
+
+    //We can narrow down a request using the content type
+    // of its body using headers
+    //consume = (this method expect content-type header with the request)
+
+    //    @GetMapping(consumes = {"application/json"})
+    @GetMapping(consumes = {"Application/json"})
+    public String testOne2(){
+        return "GetMapping testOne2 invoke..!";
+    }
 }
