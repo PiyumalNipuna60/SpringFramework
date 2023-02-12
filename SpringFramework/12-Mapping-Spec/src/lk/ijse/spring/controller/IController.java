@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/nine")
 public class IController {
 
-
+@GetMapping
+    public String test(){
+    return "hy";
+}
 
 }
