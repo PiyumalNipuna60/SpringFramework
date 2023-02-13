@@ -88,7 +88,7 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script>
 
-    let baseURL="http://localhost:8080/app/";
+    let baseURL="http://localhost:8081/12_Mapping_Spec/";
 
     loadAllCustomers();
 
@@ -98,6 +98,7 @@
         var formData = $("#customerForm").serialize();
         // will generate a query String including form data
 
+        console.log('log', formData)
         //send ajax request to the customer servlet
         $.ajax({
             url: baseURL+"customer",
