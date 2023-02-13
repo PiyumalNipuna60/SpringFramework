@@ -13,4 +13,10 @@ public class LController {
 
         System.out.println(dto.toString());
     }
+
+    @PutMapping
+    public CustomerDTO UpdateCustomer(@RequestBody CustomerDTO dto  ){
+        System.out.println(dto.toString());
+       return dto;
+    }
 }
