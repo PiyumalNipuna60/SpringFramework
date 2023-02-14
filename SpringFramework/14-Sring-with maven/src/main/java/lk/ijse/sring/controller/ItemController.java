@@ -2,6 +2,7 @@ package lk.ijse.sring.controller;
 
 import lk.ijse.sring.dto.ItemDTO;
 import lk.ijse.sring.util.ResponseUtil;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class ItemController {
         return new ResponseUtil("OK","Successfully Update : "+dto.getCode(),null);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public ResponseUtil saveItem(ItemDTO dto){
         return new ResponseUtil("OK","Successfully saveItem : "+dto.getCode(),null);
