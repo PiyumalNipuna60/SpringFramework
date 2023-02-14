@@ -1,9 +1,7 @@
 package lk.ijse.sring.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lk.ijse.sring.dto.CustomerDTO;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
@@ -13,5 +11,11 @@ public class CustomerController {
     @GetMapping
     public void getCustomer(){
         System.out.println("CustomerController getCustomer invoke..!");
+    }
+
+    @PostMapping
+    public void saveCustomer(CustomerDTO dto){
+        System.out.println(dto.getId()+" "+dto.getName()+" "+dto.getAddress()+" "+dto.getSalary());
+
     }
 }
