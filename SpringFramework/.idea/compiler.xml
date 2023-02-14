@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="14-Sring-with maven" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="14-spring-with-maven" target="1.5" />
+      <module name="14-Sring-with maven" target="8" />
       <module name="14-Sring-with-maven" target="1.5" />
       <module name="15-new" target="1.5" />
       <module name="I4_Spring_With_Maven" target="1.5" />
