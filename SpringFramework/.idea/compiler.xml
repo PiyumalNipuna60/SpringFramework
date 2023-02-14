@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="14-spring-with-maven" target="1.5" />
+      <module name="14-Sring-with-maven" target="1.5" />
+      <module name="15-new" target="1.5" />
+      <module name="I4_Spring_With_Maven" target="1.5" />
+      <module name="sample" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

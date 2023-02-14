@@ -9,7 +9,6 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="spring-aop-5.3.9-javadoc" />
-          <element id="library" level="project" name="jackson-annotations-2.14.2" />
         </element>
       </element>
     </root>

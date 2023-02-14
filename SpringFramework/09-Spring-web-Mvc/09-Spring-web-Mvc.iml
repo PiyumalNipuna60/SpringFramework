@@ -18,8 +18,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="spring-aop-5.3.9-javadoc" level="project" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.831" level="application_server_libraries" />
+    <orderEntry type="library" name="spring-aop-5.3.9-javadoc" level="project" />
   </component>
 </module>
