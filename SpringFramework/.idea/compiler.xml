@@ -16,7 +16,7 @@
       <module name="14-Sring-with-maven" target="1.5" />
       <module name="15-new" target="1.5" />
       <module name="I4_Spring_With_Maven" target="1.5" />
-      <module name="I5-Spring_Data_JPA" target="1.5" />
+      <module name="I5-Spring_Data_JPA" target="8" />
       <module name="sample" target="1.5" />
     </bytecodeTargetLevel>
   </component>

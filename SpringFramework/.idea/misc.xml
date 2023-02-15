@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/14-Sring-with maven" />
+    <file type="web" url="file://$PROJECT_DIR$/I5-Spring_Data_JPA" />
     <type id="Spring" />
   </component>
   <component name="JavadocGenerationManager">
