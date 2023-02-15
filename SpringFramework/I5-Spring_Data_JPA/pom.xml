@@ -7,6 +7,17 @@
     <groupId>lk.ijse</groupId>
     <artifactId>I5-Spring_Data_JPA</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.3.25</version>
+        </dependency>
+
+
+    </dependencies>
 
 </project>
