@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="I5-Spring_Data_JPA:war exploded">
-    <output-path>$PROJECT_DIR$/I5-Spring_Data_JPA/target/I5-Spring_Data_JPA-1.0-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="15-Spring_Data_JPA:war exploded">
+    <output-path>$PROJECT_DIR$/15-Spring_Data_JPA/target/I5-Spring_Data_JPA-1.0-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>I5-Spring_Data_JPA</module>
+        <module>15-Spring_Data_JPA</module>
         <packaging>war</packaging>
       </options>
     </properties>
@@ -47,6 +47,8 @@
           <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.7" />
           <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.8" />
           <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
+          <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:8.0.32" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.21.9" />
         </element>
       </element>
       <element id="directory" name="META-INF">

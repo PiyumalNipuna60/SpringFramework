@@ -2,7 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/14-Sring-with maven" />
-    <file type="web" url="file://$PROJECT_DIR$/I5-Spring_Data_JPA" />
+    <file type="web" url="file://$PROJECT_DIR$/15-Spring_Data_JPA" />
     <type id="Spring" />
   </component>
   <component name="JavadocGenerationManager">
@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/../SpringFramework14-Sring-with-maven/pom.xml" />
         <option value="$PROJECT_DIR$/14-Sring-with maven/pom.xml" />
         <option value="$PROJECT_DIR$/I5-Spring_Data_JPA/pom.xml" />
+        <option value="$PROJECT_DIR$/15-Spring_Data_JPA/pom.xml" />
       </list>
     </option>
   </component>

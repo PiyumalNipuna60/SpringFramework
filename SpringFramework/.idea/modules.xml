@@ -16,7 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/12-Mapping-Spec/12-Mapping-Spec.iml" filepath="$PROJECT_DIR$/12-Mapping-Spec/12-Mapping-Spec.iml" />
       <module fileurl="file://$PROJECT_DIR$/13-POS_Front_End/13-POS_Front_End.iml" filepath="$PROJECT_DIR$/13-POS_Front_End/13-POS_Front_End.iml" />
       <module fileurl="file://$PROJECT_DIR$/14-Sring-with maven/14-Sring-with maven.iml" filepath="$PROJECT_DIR$/14-Sring-with maven/14-Sring-with maven.iml" />
-      <module fileurl="file://$PROJECT_DIR$/I5-Spring_Data_JPA/I5-Spring_Data_JPA.iml" filepath="$PROJECT_DIR$/I5-Spring_Data_JPA/I5-Spring_Data_JPA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15-Spring_Data_JPA/15-Spring_Data_JPA.iml" filepath="$PROJECT_DIR$/15-Spring_Data_JPA/15-Spring_Data_JPA.iml" />
     </modules>
   </component>
 </project>
