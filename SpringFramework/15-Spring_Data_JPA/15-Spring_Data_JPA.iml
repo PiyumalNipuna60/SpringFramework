@@ -16,7 +16,9 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="15-Spring_Data_JPA" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -69,5 +71,6 @@
     <orderEntry type="library" name="Maven: com.mysql:mysql-connector-j:8.0.32" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.21.9" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.26" level="project" />
+    <orderEntry type="module" module-name="14-Sring-with maven" />
   </component>
 </module>
