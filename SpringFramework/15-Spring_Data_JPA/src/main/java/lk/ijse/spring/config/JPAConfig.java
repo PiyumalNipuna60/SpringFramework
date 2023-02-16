@@ -5,6 +5,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.Database;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
@@ -29,4 +32,16 @@ public class JPAConfig {
         db.setPassword("1234");
         return db;
     }
+
+    @Bean
+    public JpaVendorAdapter jpaVendorAdapter(){
+        HibernateJpaVendorAdapter jpa = new HibernateJpaVendorAdapter();
+        jpa.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect");
+        jpa.setDatabase(Database.MYSQL);
+        jpa.setGenerateDdl(true);
+        jpa.setShowSql(true);
+        return jpa;
+    }
+
+
 }
