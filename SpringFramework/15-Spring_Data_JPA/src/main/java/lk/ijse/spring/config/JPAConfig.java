@@ -17,37 +17,38 @@ import javax.sql.DataSource;
 public class JPAConfig {
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource source, JpaVendorAdapter jpv){
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource ds, JpaVendorAdapter va){
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setPackagesToScan("lk.ijse.spring.entity");
-        factoryBean.setDataSource(source);
-        factoryBean.setJpaVendorAdapter(jpv);
+        factoryBean.setDataSource(ds);
+        factoryBean.setJpaVendorAdapter(va);
         return factoryBean;
     }
 
     @Bean
     public DataSource dataSource(){
-        DriverManagerDataSource db = new DriverManagerDataSource();
-        db.setDriverClassName("com.mysql.jdbc.Driver");
-        db.setUrl("jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true");
-        db.setUsername("root");
-        db.setPassword("1234");
-        return db;
+        DriverManagerDataSource ds= new DriverManagerDataSource();
+        ds.setDriverClassName("com.mysql.jdbc.Driver");
+        ds.setUrl("jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true");
+        ds.setUsername("root");
+        ds.setPassword("1234");
+        return ds;
     }
+
 
     @Bean
     public JpaVendorAdapter jpaVendorAdapter(){
-        HibernateJpaVendorAdapter jpa = new HibernateJpaVendorAdapter();
-        jpa.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect");
-        jpa.setDatabase(Database.MYSQL);
-        jpa.setGenerateDdl(true);
-        jpa.setShowSql(true);
-        return jpa;
+        HibernateJpaVendorAdapter va= new HibernateJpaVendorAdapter();
+        va.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect");
+        va.setDatabase(Database.MYSQL);
+        va.setGenerateDdl(true);
+        va.setShowSql(true);
+        return va;
     }
+
 
     @Bean
     public PlatformTransactionManager transactionManager(EntityManagerFactory emf){
         return new JpaTransactionManager(emf);
-
     }
 }

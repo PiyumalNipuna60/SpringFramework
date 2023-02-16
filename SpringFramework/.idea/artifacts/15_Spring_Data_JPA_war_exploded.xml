@@ -22,16 +22,16 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.25" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.25" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.25" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.2" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.2" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.1" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.7.7" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.7.7" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.3.25" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.3.25" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.25" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.6.15.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.6.14.Final" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.3.Final" />
           <element id="library" level="project" name="Maven: javax.persistence:javax.persistence-api:2.2" />
           <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.12.18" />
@@ -49,9 +49,6 @@
           <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
           <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:8.0.32" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.21.9" />
-          <element id="archive" name="14-Sring-with maven-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="14-Sring-with maven" />
-          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">
