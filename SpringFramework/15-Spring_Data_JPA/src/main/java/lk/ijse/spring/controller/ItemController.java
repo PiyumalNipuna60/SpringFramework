@@ -4,6 +4,7 @@ import lk.ijse.spring.dto.ItemDTO;
 import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.entity.Item;
 import lk.ijse.spring.repo.ItemRepo;
+import lk.ijse.spring.service.ItemService;
 import lk.ijse.spring.util.RespondUtil;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -18,43 +19,53 @@ import java.util.ArrayList;
 @CrossOrigin
 public class ItemController {
 
-    @Autowired
+   /* @Autowired
     private ItemRepo repo;
 
     @Autowired
-    private ModelMapper mapper;
+    private ModelMapper mapper;*/
+
+    @Autowired
+    private ItemService service;
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public RespondUtil saveItem(@ModelAttribute ItemDTO dto){
-        if (repo.existsById(dto.getCode())){
+       /* if (repo.existsById(dto.getCode())){
             throw new RuntimeException(dto.getCode()+ " : Item already registered.!");
         }
-        repo.save(mapper.map(dto, Item.class));
+        repo.save(mapper.map(dto, Item.class));*/
+        service.saveItem(dto);
         return new RespondUtil("OK","Successfully Registered.!",null);
     }
 
     @DeleteMapping(params = {"code"})
     public RespondUtil deleteItem(@RequestParam String code){
-        if (!repo.existsById(code)){
+        /*if (!repo.existsById(code)){
             throw new RuntimeException(code+ " : Item Not Exists to Delete.!");
         }
-        repo.deleteById(code);
+        repo.deleteById(code);*/
+
+        service.deleteItem(code);
         return new RespondUtil("OK","Successfully Deleted. :"+code  ,null);
     }
 
     @PutMapping
     public RespondUtil updateItem(@RequestBody ItemDTO dto){
-        if (!repo.existsById(dto.getCode())){
+      /*  if (!repo.existsById(dto.getCode())){
             throw new RuntimeException(dto.getCode()+ " : Item Not Exist for Update.!");
         }
-        repo.save(mapper.map(dto, Item.class));
+        repo.save(mapper.map(dto, Item.class));*/
+
+        service.updateItem(dto);
         return new RespondUtil("OK","Successfully Updated. :"+dto.getCode() ,null);
     }
 
     @GetMapping
     public RespondUtil getAllItems(){
-        ArrayList<ItemDTO> list=mapper.map(repo.findAll(),new TypeToken< ArrayList<ItemDTO>>(){}.getType());
+/*        ArrayList<ItemDTO> list=mapper.map(repo.findAll(),new TypeToken< ArrayList<ItemDTO>>(){}.getType());*/
+
+        ArrayList<ItemDTO> list = service.getAllItems();
         return new RespondUtil("OK","Successfully Loaded. :" ,list);
     }
 
