@@ -21,6 +21,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.1" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.6.14.Final" />
           <element id="library" level="project" name="Maven: org.modelmapper:modelmapper:3.1.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2" />
         </element>
       </element>
     </root>
