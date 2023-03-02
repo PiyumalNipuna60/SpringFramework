@@ -4,9 +4,12 @@ import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.util.RespondUtil;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -17,9 +20,15 @@ public class CustomerController {
     @Autowired
     private CustomerRepo repo;
 
+    @Autowired
+    private ModelMapper mapper;
+
     @GetMapping
     public RespondUtil getAllCustomer() {
         List<Customer> all = repo.findAll();
+
+        /*or*/
+       // ArrayList<CustomerDTO> alls = mapper.map(all, new TypeToken<ArrayList<CustomerDTO>>() {}.getType());
         return new RespondUtil("OK", "Successfully LoadAll.!", all);
     }
 
@@ -28,8 +37,9 @@ public class CustomerController {
         if (repo.existsById(dto.getId())) {
             throw new RuntimeException("Customer Already Exist. Please enter another id..!");
         }
-        Customer customer = new Customer(dto.getId(), dto.getName(), dto.getAddress(), String.valueOf(dto.getSalary()));
-        repo.save(customer);
+        Customer map = mapper.map(dto, Customer.class);
+    //    Customer customer = new Customer(dto.getId(), dto.getName(), dto.getAddress(), String.valueOf(dto.getSalary()));
+        repo.save(map);
 
         return new RespondUtil("OK", "Successfully Registered.!", null);
     }
@@ -48,8 +58,10 @@ public class CustomerController {
         if (!repo.existsById(dto.getId())) {
             throw new RuntimeException("Wrong ID..No Such a Customer to Update..!");
         }
-        Customer customer = new Customer(dto.getId(), dto.getName(), dto.getAddress(), String.valueOf(dto.getSalary()));
-        repo.save(customer);
+        //Customer customer = new Customer(dto.getId(), dto.getName(), dto.getAddress(), String.valueOf(dto.getSalary()));
+
+        Customer map = mapper.map(dto, Customer.class);
+        repo.save(map);
         return new RespondUtil("OK", "Successfully Updated. :" + dto.getId(), null);
     }
 }
