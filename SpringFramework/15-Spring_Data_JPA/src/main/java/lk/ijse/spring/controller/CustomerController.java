@@ -1,6 +1,5 @@
 package lk.ijse.spring.controller;
 
-import com.google.protobuf.StringValue;
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.repo.CustomerRepo;
@@ -8,7 +7,7 @@ import lk.ijse.spring.util.RespondUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -20,38 +19,37 @@ public class CustomerController {
 
     @GetMapping
     public RespondUtil getAllCustomer() {
-        ArrayList<CustomerDTO> allCustomer = new ArrayList();
-        allCustomer.add(new CustomerDTO("C001","kamala","galle",2500));
-        allCustomer.add(new CustomerDTO("C002","vimala","matara",3000));
-        allCustomer.add(new CustomerDTO("C003","somapala","colombo",4000));
-        allCustomer.add(new CustomerDTO("C004","gunapala","colombo",5000));
-        return new RespondUtil("OK","Successfully LoadAll.!",allCustomer);
+        List<Customer> all = repo.findAll();
+        return new RespondUtil("OK", "Successfully LoadAll.!", all);
     }
 
     @PostMapping
-    public RespondUtil saveCustomer(@ModelAttribute CustomerDTO dto){
-        if (dto.getId().equals("C001")){
+    public RespondUtil saveCustomer(@ModelAttribute CustomerDTO dto) {
+        if (repo.existsById(dto.getId())) {
             throw new RuntimeException("Customer Already Exist. Please enter another id..!");
         }
         Customer customer = new Customer(dto.getId(), dto.getName(), dto.getAddress(), String.valueOf(dto.getSalary()));
         repo.save(customer);
 
-        return new RespondUtil("OK","Successfully Registered.!",null);
+        return new RespondUtil("OK", "Successfully Registered.!", null);
     }
 
     @DeleteMapping(params = {"id"})
-    public RespondUtil deleteCustomer(@RequestParam String id){
-        if (id.equals("C001")){
+    public RespondUtil deleteCustomer(@RequestParam String id) {
+        if (!repo.existsById(id)) {
             throw new RuntimeException("Wrong ID..Please enter valid id..!");
         }
-        return new RespondUtil("OK","Successfully Deleted. :"+id ,null);
+        repo.deleteById(id);
+        return new RespondUtil("OK", "Successfully Deleted. :" + id, null);
     }
 
     @PutMapping
-    public RespondUtil updateCustomer(@RequestBody CustomerDTO dto){
-        if (dto.getId().equals("C001")){
+    public RespondUtil updateCustomer(@RequestBody CustomerDTO dto) {
+        if (!repo.existsById(dto.getId())) {
             throw new RuntimeException("Wrong ID..No Such a Customer to Update..!");
         }
-        return new RespondUtil("OK","Successfully Updated. :"+dto.getId() ,null);
+        Customer customer = new Customer(dto.getId(), dto.getName(), dto.getAddress(), String.valueOf(dto.getSalary()));
+        repo.save(customer);
+        return new RespondUtil("OK", "Successfully Updated. :" + dto.getId(), null);
     }
 }
