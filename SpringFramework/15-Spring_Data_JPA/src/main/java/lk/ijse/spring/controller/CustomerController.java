@@ -1,6 +1,8 @@
 package lk.ijse.spring.controller;
 
+import com.google.protobuf.StringValue;
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.entity.Customer;
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.util.RespondUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +33,9 @@ public class CustomerController {
         if (dto.getId().equals("C001")){
             throw new RuntimeException("Customer Already Exist. Please enter another id..!");
         }
+        Customer customer = new Customer(dto.getId(), dto.getName(), dto.getAddress(), String.valueOf(dto.getSalary()));
+        repo.save(customer);
+
         return new RespondUtil("OK","Successfully Registered.!",null);
     }
 
